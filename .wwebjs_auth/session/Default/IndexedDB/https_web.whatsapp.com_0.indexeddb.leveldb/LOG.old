@@ -1,0 +1,12 @@
+2025/06/13-01:06:46.207 456c Reusing MANIFEST C:\Users\lulud\OneDrive\Área de Trabalho\projetoz\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/06/13-01:06:46.208 456c Recovering log #168
+2025/06/13-01:06:46.405 456c Reusing old log C:\Users\lulud\OneDrive\Área de Trabalho\projetoz\.wwebjs_auth\session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000168.log 
+2025/06/13-01:06:50.680 3df4 Level-0 table #174: started
+2025/06/13-01:06:50.711 3df4 Level-0 table #174: 937873 bytes OK
+2025/06/13-01:06:50.713 3df4 Delete type=0 #168
+2025/06/13-01:06:50.714 3df4 Manual compaction at level-0 from '\x00>\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00?\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/06/13-01:06:53.013 3df4 Compacting 1@1 + 2@2 files
+2025/06/13-01:06:53.182 3df4 Generated table #175@1: 66263 keys, 2231379 bytes
+2025/06/13-01:06:53.234 3df4 Generated table #176@1: 19120 keys, 446861 bytes
+2025/06/13-01:06:53.234 3df4 Compacted 1@1 + 2@2 files => 2678240 bytes
+2025/06/13-01:06:53.235 3df4 compacted to: files[ 0 0 2 0 0 0 0 ]

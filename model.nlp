@@ -1,0 +1,783 @@
+{
+  "settings": {
+    "languages": [
+      "pt"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "pt"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "pt": {
+        "settings": {
+          "locale": "pt",
+          "trainByDomain": false,
+          "tag": "domain-manager-pt",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "agend,cabel,cort,de,quer,um": {
+            "intent": "agendamento.corte",
+            "domain": "default"
+          },
+          "agend,cabel,cort,de,mim,par,um": {
+            "intent": "agendamento.corte",
+            "domain": "default"
+          },
+          "cort,marqu,me,o,par": {
+            "intent": "agendamento.corte",
+            "domain": "default"
+          },
+          "amanh,cabel,cort,de,precis,um": {
+            "intent": "agendamento.corte",
+            "domain": "default"
+          },
+          "agend,barb,quer,uma": {
+            "intent": "agendamento.barba",
+            "domain": "default"
+          },
+          "a,agend,barb,me,par": {
+            "intent": "agendamento.barba",
+            "domain": "default"
+          },
+          "a,barb,marc,mim,par": {
+            "intent": "agendamento.barba",
+            "domain": "default"
+          },
+          "hoj": {
+            "intent": "dia.hoje",
+            "domain": "default"
+          },
+          "amanh": {
+            "intent": "dia.amanha",
+            "domain": "default"
+          },
+          "feir,quart": {
+            "intent": "dia.quarta",
+            "domain": "default"
+          },
+          "feir,terc": {
+            "intent": "dia.terca",
+            "domain": "default"
+          },
+          "eu,faz,nao,o,que,sei": {
+            "intent": "erro.fora_de_comando",
+            "domain": "default"
+          },
+          "entend,nad,nao": {
+            "intent": "erro.fora_de_comando",
+            "domain": "default"
+          },
+          "faz,o,pod,que,voc": {
+            "intent": "erro.fora_de_comando",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "agendamento.corte": "default",
+          "agendamento.barba": "default",
+          "dia.hoje": "default",
+          "dia.amanha": "default",
+          "dia.quarta": "default",
+          "dia.terca": "default",
+          "erro.fora_de_comando": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Quero agendar um corte de cabelo",
+            "intent": "agendamento.corte"
+          },
+          {
+            "domain": "default",
+            "utterance": "Agende para mim um corte de cabelo",
+            "intent": "agendamento.corte"
+          },
+          {
+            "domain": "default",
+            "utterance": "Me marque para o corte",
+            "intent": "agendamento.corte"
+          },
+          {
+            "domain": "default",
+            "utterance": "Preciso de um corte de cabelo amanhã",
+            "intent": "agendamento.corte"
+          },
+          {
+            "domain": "default",
+            "utterance": "Quero agendar uma barba",
+            "intent": "agendamento.barba"
+          },
+          {
+            "domain": "default",
+            "utterance": "Me agende para a barba",
+            "intent": "agendamento.barba"
+          },
+          {
+            "domain": "default",
+            "utterance": "Marca para mim a barba",
+            "intent": "agendamento.barba"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hoje",
+            "intent": "dia.hoje"
+          },
+          {
+            "domain": "default",
+            "utterance": "Amanhã",
+            "intent": "dia.amanha"
+          },
+          {
+            "domain": "default",
+            "utterance": "Quarta-feira",
+            "intent": "dia.quarta"
+          },
+          {
+            "domain": "default",
+            "utterance": "Terça-feira",
+            "intent": "dia.terca"
+          },
+          {
+            "domain": "default",
+            "utterance": "Eu não sei o que fazer",
+            "intent": "erro.fora_de_comando"
+          },
+          {
+            "domain": "default",
+            "utterance": "Não entendi nada",
+            "intent": "erro.fora_de_comando"
+          },
+          {
+            "domain": "default",
+            "utterance": "O que você pode fazer",
+            "intent": "erro.fora_de_comando"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "pt",
+              "tag": "nlu-pt",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "quer": 1,
+              "agend": 1,
+              "um": 1,
+              "cort": 1,
+              "de": 1,
+              "cabel": 1,
+              "par": 1,
+              "mim": 1,
+              "me": 1,
+              "marqu": 1,
+              "o": 1,
+              "precis": 1,
+              "amanh": 1,
+              "uma": 1,
+              "barb": 1,
+              "a": 1,
+              "marc": 1,
+              "hoj": 1,
+              "quart": 1,
+              "feir": 1,
+              "terc": 1,
+              "eu": 1,
+              "nao": 1,
+              "sei": 1,
+              "que": 1,
+              "faz": 1,
+              "entend": 1,
+              "nad": 1,
+              "voc": 1,
+              "pod": 1
+            },
+            "intents": {
+              "agendamento.corte": 1,
+              "agendamento.barba": 1,
+              "dia.hoje": 1,
+              "dia.amanha": 1,
+              "dia.quarta": 1,
+              "dia.terca": 1,
+              "erro.fora_de_comando": 1
+            },
+            "intentFeatures": {
+              "agendamento.corte": {
+                "quer": 1,
+                "agend": 1,
+                "um": 1,
+                "cort": 1,
+                "de": 1,
+                "cabel": 1,
+                "par": 1,
+                "mim": 1,
+                "me": 1,
+                "marqu": 1,
+                "o": 1,
+                "precis": 1,
+                "amanh": 1
+              },
+              "agendamento.barba": {
+                "quer": 1,
+                "agend": 1,
+                "uma": 1,
+                "barb": 1,
+                "me": 1,
+                "par": 1,
+                "a": 1,
+                "marc": 1,
+                "mim": 1
+              },
+              "dia.hoje": {
+                "hoj": 1
+              },
+              "dia.amanha": {
+                "amanh": 1
+              },
+              "dia.quarta": {
+                "quart": 1,
+                "feir": 1
+              },
+              "dia.terca": {
+                "terc": 1,
+                "feir": 1
+              },
+              "erro.fora_de_comando": {
+                "eu": 1,
+                "nao": 1,
+                "sei": 1,
+                "o": 1,
+                "que": 1,
+                "faz": 1,
+                "entend": 1,
+                "nad": 1,
+                "voc": 1,
+                "pod": 1
+              }
+            },
+            "featuresToIntent": {
+              "quer": [
+                "agendamento.corte",
+                "agendamento.barba"
+              ],
+              "agend": [
+                "agendamento.corte",
+                "agendamento.barba"
+              ],
+              "um": [
+                "agendamento.corte"
+              ],
+              "cort": [
+                "agendamento.corte"
+              ],
+              "de": [
+                "agendamento.corte"
+              ],
+              "cabel": [
+                "agendamento.corte"
+              ],
+              "par": [
+                "agendamento.corte",
+                "agendamento.barba"
+              ],
+              "mim": [
+                "agendamento.corte",
+                "agendamento.barba"
+              ],
+              "me": [
+                "agendamento.corte",
+                "agendamento.barba"
+              ],
+              "marqu": [
+                "agendamento.corte"
+              ],
+              "o": [
+                "agendamento.corte",
+                "erro.fora_de_comando"
+              ],
+              "precis": [
+                "agendamento.corte"
+              ],
+              "amanh": [
+                "agendamento.corte",
+                "dia.amanha"
+              ],
+              "uma": [
+                "agendamento.barba"
+              ],
+              "barb": [
+                "agendamento.barba"
+              ],
+              "a": [
+                "agendamento.barba"
+              ],
+              "marc": [
+                "agendamento.barba"
+              ],
+              "hoj": [
+                "dia.hoje"
+              ],
+              "quart": [
+                "dia.quarta"
+              ],
+              "feir": [
+                "dia.quarta",
+                "dia.terca"
+              ],
+              "terc": [
+                "dia.terca"
+              ],
+              "eu": [
+                "erro.fora_de_comando"
+              ],
+              "nao": [
+                "erro.fora_de_comando"
+              ],
+              "sei": [
+                "erro.fora_de_comando"
+              ],
+              "que": [
+                "erro.fora_de_comando"
+              ],
+              "faz": [
+                "erro.fora_de_comando"
+              ],
+              "entend": [
+                "erro.fora_de_comando"
+              ],
+              "nad": [
+                "erro.fora_de_comando"
+              ],
+              "voc": [
+                "erro.fora_de_comando"
+              ],
+              "pod": [
+                "erro.fora_de_comando"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "pt",
+                "tag": "nlu-pt",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "quer",
+                "agend",
+                "um",
+                "cort",
+                "de",
+                "cabel",
+                "par",
+                "mim",
+                "me",
+                "marqu",
+                "o",
+                "precis",
+                "amanh",
+                "uma",
+                "barb",
+                "a",
+                "marc",
+                "hoj",
+                "quart",
+                "feir",
+                "terc",
+                "eu",
+                "nao",
+                "sei",
+                "que",
+                "faz",
+                "entend",
+                "nad",
+                "voc",
+                "pod"
+              ],
+              "intents": [
+                "agendamento.corte",
+                "agendamento.barba",
+                "dia.hoje",
+                "dia.amanha",
+                "dia.quarta",
+                "dia.terca",
+                "erro.fora_de_comando"
+              ],
+              "perceptrons": [
+                [
+                  1.0070405006408691,
+                  -0.13924331963062286,
+                  2.5340166091918945,
+                  5.549098968505859,
+                  2.5340166091918945,
+                  2.5340166091918945,
+                  1.4136295318603516,
+                  -0.3969745337963104,
+                  1.811328411102295,
+                  3.0148279666900635,
+                  2.22442626953125,
+                  1.0666145086288452,
+                  -0.22254019975662231,
+                  -0.31717050075531006,
+                  -2.0446672439575195,
+                  -1.6418285369873047,
+                  -0.36642053723335266,
+                  -0.37580931186676025,
+                  -0.16684141755104065,
+                  -0.3569372296333313,
+                  -0.16102904081344604,
+                  -0.30303409695625305,
+                  -0.4332897961139679,
+                  -0.30303409695625305,
+                  -0.7886350154876709,
+                  -0.7886350154876709,
+                  -0.10077210515737534,
+                  -0.10077210515737534,
+                  -0.4729717969894409,
+                  -0.4729717969894409,
+                  0.26868050812547417
+                ],
+                [
+                  2.3520312309265137,
+                  2.553699016571045,
+                  -1.2887794971466064,
+                  -2.0416200160980225,
+                  -1.2887794971466064,
+                  -1.2887794971466064,
+                  1.485557198524475,
+                  1.0221542119979858,
+                  0.4634714722633362,
+                  -0.6381781101226807,
+                  -0.8825830221176147,
+                  0,
+                  -0.6938404440879822,
+                  2.7587709426879883,
+                  5.923318862915039,
+                  3.164402961730957,
+                  1.9924944639205933,
+                  -0.6958672404289246,
+                  -0.27653226256370544,
+                  -0.555819034576416,
+                  -0.25804412364959717,
+                  -0.08798068016767502,
+                  -0.3716898262500763,
+                  -0.08798068016767502,
+                  -0.19384624063968658,
+                  -0.19384624063968658,
+                  -0.2364063411951065,
+                  -0.2364063411951065,
+                  -0.06894975155591965,
+                  -0.06894975155591965,
+                  0.6966167419291115
+                ],
+                [
+                  -0.5716830492019653,
+                  -0.6838201284408569,
+                  -0.24845042824745178,
+                  -0.49934181571006775,
+                  -0.24845042824745178,
+                  -0.24845042824745178,
+                  -0.6666518449783325,
+                  -0.3434818387031555,
+                  -0.32279205322265625,
+                  -0.25068405270576477,
+                  -0.7582789063453674,
+                  -0.06464777886867523,
+                  -2.346163749694824,
+                  -0.4315834045410156,
+                  -0.8077120780944824,
+                  -0.3755609095096588,
+                  -0.30345281958580017,
+                  11.534343719482422,
+                  -0.8366560935974121,
+                  -1.6630675792694092,
+                  -0.8254296183586121,
+                  -0.12957164645195007,
+                  -0.9274822473526001,
+                  -0.12957164645195007,
+                  -0.507200300693512,
+                  -0.507200300693512,
+                  -0.7834898233413696,
+                  -0.7834898233413696,
+                  -0.36320793628692627,
+                  -0.36320793628692627,
+                  2.5011304822510483
+                ],
+                [
+                  -0.5182839035987854,
+                  -0.6203224658966064,
+                  -2.703886032104492,
+                  -2.775737762451172,
+                  -2.703886032104492,
+                  -2.703886032104492,
+                  -0.5052894353866577,
+                  -0.3619527518749237,
+                  -0.14275327324867249,
+                  -0.06268864870071411,
+                  -0.6051950454711914,
+                  -2.6150662899017334,
+                  11.153117179870605,
+                  -0.46001797914505005,
+                  -0.8644657731056213,
+                  -0.4028835892677307,
+                  -0.33139893412590027,
+                  -2.201665163040161,
+                  -0.8282172083854675,
+                  -1.6454254388809204,
+                  -0.8146827220916748,
+                  -0.12006919085979462,
+                  -0.909221351146698,
+                  -0.12006919085979462,
+                  -0.5333430767059326,
+                  -0.5333430767059326,
+                  -0.779044508934021,
+                  -0.779044508934021,
+                  -0.40316614508628845,
+                  -0.40316614508628845,
+                  2.4852303992832163
+                ],
+                [
+                  -0.21510042250156403,
+                  -0.3027712404727936,
+                  -0.15753041207790375,
+                  -0.23784470558166504,
+                  -0.15753041207790375,
+                  -0.15753041207790375,
+                  -0.27240538597106934,
+                  -0.14148519933223724,
+                  -0.12295413017272949,
+                  -0.07077448070049286,
+                  -0.3048132359981537,
+                  -0.0536065399646759,
+                  -0.7909770011901855,
+                  -0.1476733535528183,
+                  -0.3133598566055298,
+                  -0.15668520331382751,
+                  -0.10531631112098694,
+                  -0.7930094003677368,
+                  9.056113243103027,
+                  4.2178874015808105,
+                  -4.845361709594727,
+                  -0.08183015882968903,
+                  -0.38387566804885864,
+                  -0.08183015882968903,
+                  -0.222370907664299,
+                  -0.222370907664299,
+                  -0.2771492302417755,
+                  -0.2771492302417755,
+                  -0.11569289118051529,
+                  -0.11569289118051529,
+                  0.8045930963389519
+                ],
+                [
+                  -0.23281118273735046,
+                  -0.3311201333999634,
+                  -0.17606300115585327,
+                  -0.2655920088291168,
+                  -0.17606300115585327,
+                  -0.17606300115585327,
+                  -0.2981445789337158,
+                  -0.15067201852798462,
+                  -0.1371666043996811,
+                  -0.07884464412927628,
+                  -0.33945244550704956,
+                  -0.05969114601612091,
+                  -0.7829362154006958,
+                  -0.1570495367050171,
+                  -0.3401029407978058,
+                  -0.16779939830303192,
+                  -0.11024465411901474,
+                  -0.7839223742485046,
+                  -4.809701442718506,
+                  4.246237277984619,
+                  9.063034057617188,
+                  -0.0911097452044487,
+                  -0.42264536023139954,
+                  -0.0911097452044487,
+                  -0.2476162314414978,
+                  -0.2476162314414978,
+                  -0.30335932970046997,
+                  -0.30335932970046997,
+                  -0.1284119337797165,
+                  -0.1284119337797165,
+                  0.7824180960054813
+                ],
+                [
+                  -0.4038461148738861,
+                  -0.5844029188156128,
+                  -0.3065907657146454,
+                  -1.1248838901519775,
+                  -0.3065907657146454,
+                  -0.3065907657146454,
+                  -1.1109713315963745,
+                  -0.20339266955852509,
+                  -0.8600461483001709,
+                  -0.7776192426681519,
+                  2.0763039588928223,
+                  -0.046300653368234634,
+                  -1.1688822507858276,
+                  -0.23320063948631287,
+                  -0.4597386419773102,
+                  -0.18305103480815887,
+                  -0.10673893988132477,
+                  -1.1707135438919067,
+                  -0.45346933603286743,
+                  -0.8987481594085693,
+                  -0.4265071153640747,
+                  0.3135846257209778,
+                  4.578619956970215,
+                  0.3135846257209778,
+                  2.9150426387786865,
+                  2.9150426387786865,
+                  4.26500940322876,
+                  4.26500940322876,
+                  2.6014702320098877,
+                  2.6014702320098877,
+                  1.175099917195344
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "pt",
+        "Quero agendar um corte de cabelo"
+      ],
+      [
+        "pt",
+        "Agende para mim um corte de cabelo"
+      ],
+      [
+        "pt",
+        "Me marque para o corte"
+      ],
+      [
+        "pt",
+        "Preciso de um corte de cabelo amanhã"
+      ],
+      [
+        "pt",
+        "Quero agendar uma barba"
+      ],
+      [
+        "pt",
+        "Me agende para a barba"
+      ],
+      [
+        "pt",
+        "Marca para mim a barba"
+      ],
+      [
+        "pt",
+        "Hoje"
+      ],
+      [
+        "pt",
+        "Amanhã"
+      ],
+      [
+        "pt",
+        "Quarta-feira"
+      ],
+      [
+        "pt",
+        "Terça-feira"
+      ],
+      [
+        "pt",
+        "Eu não sei o que fazer"
+      ],
+      [
+        "pt",
+        "Não entendi nada"
+      ],
+      [
+        "pt",
+        "O que você pode fazer"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "pt": {
+        "agendamento.corte": [
+          {
+            "answer": "Ok, vou agendar o corte de cabelo para você!"
+          }
+        ],
+        "agendamento.barba": [
+          {
+            "answer": "Perfeito, agendando sua barba!"
+          }
+        ],
+        "dia.hoje": [
+          {
+            "answer": "Ok, você escolheu hoje!"
+          }
+        ],
+        "dia.amanha": [
+          {
+            "answer": "Você escolheu amanhã! Vou te marcar."
+          }
+        ],
+        "erro.fora_de_comando": [
+          {
+            "answer": "Desculpe, não entendi. Pode reformular?"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
